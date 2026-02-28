@@ -13,13 +13,41 @@
       background-color: #dfeeee;
     }
 
+    /* VIDEO HEADER */
     header {
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
-      background-size: cover;
-      background-position: center;
+      position: relative;
+      height: 80vh;
+      min-height: 500px;
+      overflow: hidden;
       color: white;
       text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 2;
+    }
+
+    header .content {
+      position: relative;
+      z-index: 3;
       padding: 60px 20px;
     }
 
@@ -80,7 +108,6 @@
       border-radius: 25px;
     }
 
-    /* ✅ FIXED GALLERY IMAGE */
     .gallery-img {
       width: 100%;
       max-width: 320px;
@@ -91,10 +118,6 @@
       transition: transform 0.3s ease;
     }
 
-    .gallery-img:hover {
-      transform: scale(1.05);
-    }
-
     footer {
       background: #003d44;
       color: white;
@@ -102,25 +125,23 @@
       padding: 20px;
     }
 
-    /* 📱 MOBILE FIX */
-   @media (max-width: 600px) {
+    @media (max-width: 600px) {
 
-  /* ✅ ONLY AMENITIES = 2 PER ROW */
-  #amenities .features {
-    grid-template-columns: repeat(2, 1fr);
-  }
+      /* ONLY AMENITIES = 2 PER ROW */
+      #amenities .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
       header img {
         height: 160px;
       }
 
-      /* FORCE 1 IMAGE PER ROW */
+      /* Gallery = 1 per row */
       #gallery .features {
         grid-template-columns: 1fr;
       }
 
       .gallery-img {
-        max-width: 100%;
         width: 100%;
         height: 260px;
       }
@@ -130,10 +151,17 @@
 
 <body>
 
+  <!-- VIDEO HEADER -->
   <header>
-    <img src="West Shore Logo 2.jpg" alt="West Shore Beach Resort Logo">
-    <p>Your Perfect Escape by the Sea</p>
-    <a href="#contact" class="btn">Book Your Stay</a>
+    <video autoplay muted loop playsinline>
+      <source src="West Shore Video 2.mp4" type="video/mp4">
+    </video>
+
+    <div class="content">
+      <img src="West Shore Logo 2.jpg" alt="West Shore Beach Resort Logo">
+      <p>Your Perfect Escape by the Sea</p>
+      <a href="#contact" class="btn">Book Your Stay</a>
+    </div>
   </header>
 
   <nav>
@@ -143,66 +171,64 @@
     <a href="#contact">Contact</a>
   </nav>
 
+  <!-- ABOUT -->
   <section id="about">
     <h2>About West Shore Beach Resort</h2>
     <p>
       West Shore Beach Resort is a private seaside getaway designed for relaxation,
-      family bonding, and unforgettable moments by the sea. Surrounded by natural
-      beauty, calm waves, and golden sunsets, our resort offers comfort, privacy,
-      and a peaceful escape from the busy city life.
-      <br><br>
-      Whether you’re planning a family outing, barkada trip, or a special celebration,
-      West Shore Beach Resort is the perfect place to relax, enjoy, and create memories.
+      family bonding, and unforgettable moments by the sea.
     </p>
   </section>
 
-<section id="amenities">
-  <h2 style="text-align:center;">Amenities</h2>
+  <!-- AMENITIES (RESTORED) -->
+  <section id="amenities">
+    <h2 style="text-align:center;">Amenities</h2>
 
-  <div class="features">
+    <div class="features">
 
-    <div class="card">
-      <h3>🏡 Villas</h3>
-      <p>🏠 3 villas for 4–6 guests</p>
-      <p>🌿 Private outdoor garden with table & chairs</p>
-      <p>🛏️ 2 full-double beds (mattresses upon request – additional charge)</p>
+      <div class="card">
+        <h3>🏡 Villas</h3>
+        <p>• 3 villas designed for 4–6 guests</p>
+        <p>• Private outdoor garden with table and chairs</p>
+        <p>• 2 full-double beds (mattresses upon request – additional charge)</p>
+      </div>
+
+      <div class="card">
+        <h3>🏖️ Beach & Pool</h3>
+        <p>• Private beach access</p>
+        <p>• Swimming pool</p>
+      </div>
+
+      <div class="card">
+        <h3>🍽️ Dining & Kitchen</h3>
+        <p>• Pavilion with 3 six-seater tables</p>
+        <p>• With ref, stove, griller, and kitchenware</p>
+        <p>• No corkage fee</p>
+        <p>• Karaoke set (additional charge)</p>
+      </div>
+
+      <div class="card">
+        <h3>🚗 Parking</h3>
+        <p>• Free parking up to 6 vehicles</p>
+      </div>
+
+      <div class="card">
+        <h3>🔒 Safety & Connectivity</h3>
+        <p>• 24/7 CCTV</p>
+        <p>• Free Wi-Fi</p>
+      </div>
+
+      <div class="card">
+        <h3>🎉 Perfect For</h3>
+        <p>• Family outings</p>
+        <p>• Barkada trips</p>
+        <p>• Special occasions</p>
+      </div>
+
     </div>
+  </section>
 
-    <div class="card">
-      <h3>🏖️ Beach & Pool</h3>
-      <p>🌊 Private beach access</p>
-      <p>🏊 Swimming pool</p>
-    </div>
-
-    <div class="card">
-      <h3>🍽️ Dining & Kitchen</h3>
-      <p>🏛️ Pavilion with 3 six-seater tables</p>
-      <p>🍳 Ref, stove, griller & kitchenware</p>
-      <p>🚫🍾 No corkage fee</p>
-      <p>🎤 Karaoke set (additional charge)</p>
-    </div>
-
-    <div class="card">
-      <h3>🚗 Parking</h3>
-      <p>🅿️ Free parking for up to 6 vehicles</p>
-    </div>
-
-    <div class="card">
-      <h3>🔒 Safety & Connectivity</h3>
-      <p>📷 24/7 CCTV</p>
-      <p>📶 Free Wi-Fi</p>
-    </div>
-
-    <div class="card">
-      <h3>🎉 Events & Occasions</h3>
-      <p>👨‍👩‍👧‍👦 Family outings</p>
-      <p>🧑‍🤝‍🧑 Barkada trips</p>
-      <p>🎊 Team building & special occasions</p>
-    </div>
-
-  </div>
-</section>
-
+  <!-- GALLERY (UNCHANGED) -->
   <section id="gallery">
     <h2 style="text-align:center;">Photo Gallery</h2>
     <div class="features">
@@ -225,6 +251,7 @@
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact">
     <h2 style="text-align:center;">Contact Us</h2>
     <p style="text-align:center;">Email: westshorebeachandresort@gmail.com</p>
