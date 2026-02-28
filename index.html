@@ -56,23 +56,19 @@
     }
 
     .features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  align-items: stretch; /* IMPORTANT */
-}
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
 
-   .card {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
-
-  height: 100%;                 /* SAME HEIGHT */
-  display: flex;                /* ALIGN CONTENT */
-  flex-direction: column;
-  justify-content: center;
+    .card {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
 
     .btn {
       display: inline-block;
