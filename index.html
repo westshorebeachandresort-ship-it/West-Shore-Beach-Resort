@@ -23,10 +23,10 @@
     }
 
     header img {
-      height: 220px;
-      max-width: 95%;
-      margin-bottom: 20px;
-    }
+  height: 300px;   /* BIGGER LOGO */
+  max-width: 95%;
+  margin-bottom: 25px;
+}
 
     header p {
       font-size: 1.2rem;
@@ -50,6 +50,24 @@
       max-width: 1000px;
       margin: auto;
     }
+
+    .about-section {
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* 👈 FIXED BACKGROUND */
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.about-section p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
 
     .features {
       display: grid;
@@ -121,6 +139,19 @@
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
+
+  <section id="about" class="about-section">
+  <h2>About West Shore Beach Resort</h2>
+  <p>
+    West Shore Beach Resort is a private seaside getaway designed for relaxation,
+    family bonding, and unforgettable moments by the sea. Surrounded by natural
+    beauty, calm waves, and golden sunsets, our resort offers comfort, privacy,
+    and a peaceful escape from the busy city life.
+    <br><br>
+    Whether you’re planning a family outing, barkada trip, or a special celebration,
+    West Shore Beach Resort is the perfect place to relax, enjoy, and create memories.
+  </p>
+</section>
 
   <section id="amenities">
   <h2 style="text-align:center;">Amenities</h2>
