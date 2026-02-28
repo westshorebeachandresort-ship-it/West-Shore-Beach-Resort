@@ -103,7 +103,12 @@
     }
 
     /* 📱 MOBILE FIX */
-    @media (max-width: 600px) {
+   @media (max-width: 600px) {
+
+  /* ✅ ONLY AMENITIES = 2 PER ROW */
+  #amenities .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
       header img {
         height: 160px;
