@@ -10,6 +10,7 @@
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: #333;
+      background-color: #dfeeee; /* page background */
     }
 
     header {
@@ -19,14 +20,15 @@
       background-position: center;
       color: white;
       text-align: center;
-      padding: 90px 20px;
+      padding: 60px 20px; /* less top padding */
     }
 
-  header img {
-  height: 110px;
-  max-width: 95%;
-  margin-bottom: 20px;
-}
+    header img {
+      height: 200px; /* bigger logo */
+      max-width: 95%;
+      margin-bottom: 15px;
+    }
+
     header p {
       font-size: 1.2rem;
     }
@@ -44,29 +46,33 @@
       font-weight: bold;
     }
 
+    /* SAME BACKGROUND FOR ALL SECTIONS */
     section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 16px;
-  margin-bottom: 40px;
-}
+      padding: 45px 20px;
+      max-width: 1000px;
+      margin: 40px auto;
+      background-color: #eaf4f4; /* 🌊 visible section background */
+      border-radius: 18px;
+    }
 
     .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      justify-items: center;
-    }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  align-items: stretch; /* IMPORTANT */
+}
 
-    .card {
-      background: #f5f5f5;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
+   .card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+
+  height: 100%;                 /* SAME HEIGHT */
+  display: flex;                /* ALIGN CONTENT */
+  flex-direction: column;
+  justify-content: center;
 
     .btn {
       display: inline-block;
@@ -109,14 +115,14 @@
 
 <body>
 
-  <!-- HEADER WITH LOGO AS TITLE -->
+  <!-- HEADER -->
   <header>
     <img src="West Shore Logo.png" alt="West Shore Beach Resort Logo">
     <p>Your Perfect Escape by the Sea</p>
     <a href="#contact" class="btn">Book Your Stay</a>
   </header>
 
-  <!-- NAVIGATION (NO LOGO HERE) -->
+  <!-- NAVIGATION -->
   <nav>
     <a href="#about">About</a>
     <a href="#amenities">Amenities</a>
@@ -124,81 +130,67 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about" class="about-section">
-  <h2>About West Shore Beach Resort</h2>
-  <p>
-    West Shore Beach Resort is a private seaside getaway designed for relaxation,
-    family bonding, and unforgettable moments by the sea. Surrounded by natural
-    beauty, calm waves, and golden sunsets, our resort offers comfort, privacy,
-    and a peaceful escape from the busy city life.
-    <br><br>
-    Whether you’re planning a family outing, barkada trip, or a special celebration,
-    West Shore Beach Resort is the perfect place to relax, enjoy, and create memories.
-  </p>
-</section>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About West Shore Beach Resort</h2>
+    <p>
+      West Shore Beach Resort is a private seaside getaway designed for relaxation,
+      family bonding, and unforgettable moments by the sea. Surrounded by natural
+      beauty, calm waves, and golden sunsets, our resort offers comfort, privacy,
+      and a peaceful escape from the busy city life.
+      <br><br>
+      Whether you’re planning a family outing, barkada trip, or a special celebration,
+      West Shore Beach Resort is the perfect place to relax, enjoy, and create memories.
+    </p>
+  </section>
 
+  <!-- AMENITIES -->
   <section id="amenities">
-  <h2 style="text-align:center;">Amenities</h2>
+    <h2 style="text-align:center;">Amenities</h2>
 
-  <div class="features">
+    <div class="features">
+      <div class="card">
+        <h3>🏡 Villas</h3>
+        <p>
+          • 3 villas for 4–6 guests<br>
+          • Private outdoor garden<br>
+          • Beds available upon request
+        </p>
+      </div>
 
-    <div class="card">
-      <h3>🏡 Villas</h3>
-      <p>
-        • 3 villas designed for 4–6 guests<br>
-        • Private outdoor garden with table & chairs<br>
-        • 2 full-double beds (mattresses upon request – additional charge)
-      </p>
+      <div class="card">
+        <h3>🏖️ Beach & Pool</h3>
+        <p>
+          • Private beach access<br>
+          • Swimming pool
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🍽️ Dining & Kitchen</h3>
+        <p>
+          • Pavilion dining<br>
+          • Kitchenware provided<br>
+          • Karaoke (extra)
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🚗 Parking</h3>
+        <p>• Free parking up to 6 vehicles</p>
+      </div>
+
+      <div class="card">
+        <h3>🔒 Safety & Wi-Fi</h3>
+        <p>• 24/7 CCTV<br>• Free Wi-Fi</p>
+      </div>
+
+      <div class="card">
+        <h3>🎉 Perfect For</h3>
+        <p>• Family • Barkada • Events</p>
+      </div>
     </div>
-
-    <div class="card">
-      <h3>🏖️ Beach & Pool</h3>
-      <p>
-        • Private beach access<br>
-        • Swimming pool
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>🍽️ Dining & Kitchen</h3>
-      <p>
-        • Pavilion with 3 six-seater tables<br>
-        • Refrigerator, stove, griller & kitchenware<br>
-        • No corkage fee<br>
-        • Karaoke set (additional charge)
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>🚗 Parking</h3>
-      <p>
-        • Free parking for up to 6 vehicles
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>🔒 Safety & Connectivity</h3>
-      <p>
-        • 24/7 CCTV<br>
-        • Free Wi-Fi
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>🎉 Perfect For</h3>
-      <p>
-        • Family outings<br>
-        • Barkada trips<br>
-        • Special occasions
-      </p>
-    </div>
-
-  </div>
-
-  <p style="text-align:center; margin-top:30px; font-weight:bold;">
-   
-  </p>
-</section>
+  </section>
 
   <!-- GALLERY -->
   <section id="gallery">
