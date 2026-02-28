@@ -13,14 +13,42 @@
       background-color: #dfeeee;
     }
 
-    header {
-  position: relative;
-  height: auto;
-  padding: 60px 20px;
-  overflow: hidden;
-  color: white;
-  text-align: center;
-}
+  header {
+      position: relative;
+      height: 80vh;
+      min-height: 500px;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 2;
+    }
+
+    header .content {
+      position: relative;
+      z-index: 3;
+      padding: 60px 20px;
+    }
 
     header img {
       height: 300px;
