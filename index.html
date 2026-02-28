@@ -14,14 +14,13 @@
     }
 
     header {
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-    }
+  position: relative;
+  height: auto;
+  padding: 60px 20px;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+}
 
     header img {
       height: 300px;
@@ -131,9 +130,13 @@
 <body>
 
   <header>
-    <img src="West Shore Logo 2.jpg" alt="West Shore Beach Resort Logo">
-    <p>Your Perfect Escape by the Sea</p>
-    <a href="#contact" class="btn">Book Your Stay</a>
+      <video autoplay loop playsinline controls>
+    <source src="West Shore Video 2.mp4" type="video/mp4">
+  </video>
+
+  <img src="West Shore Logo 2.jpg" alt="West Shore Beach Resort Logo">
+  <p>Your Perfect Escape by the Sea</p>
+  <a href="#contact" class="btn">Book Your Stay</a>
   </header>
 
   <nav>
