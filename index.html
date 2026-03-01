@@ -74,6 +74,13 @@
       font-weight: bold;
     }
 
+    .rates-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
     section {
       padding: 45px 20px;
       max-width: 1000px;
@@ -181,61 +188,71 @@
 <section id="rates">
   <h2 style="text-align:center;">Villa Rates</h2>
   <p style="text-align:center; max-width:700px; margin: 0 auto 30px;">
-    Choose the perfect villa package for your group and enjoy an exclusive seaside
-    stay at West Shore Beach Resort. Our rates vary depending on the season and
-    number of guests to ensure comfort, privacy, and great value.
+    Our villa packages are designed to accommodate different group sizes.
+    Rates vary depending on season and number of villas reserved.
   </p>
 
-  <div class="features">
-
+  <!-- ROW 1: 1 & 2 VILLAS -->
+  <div class="rates-row">
     <div class="card">
       <h3>🏡 1 Villa</h3>
-      <p><strong>Maximum of 4–6 guests</strong></p>
-      <p>🌴 Lean Season: <strong>₱7,900</strong></p>
-      <p>🌞 Peak Season: <strong>₱8,900</strong></p>
-      <p>🔥 Super Peak Season: <strong>₱10,500</strong></p>
+      <p><strong>4–6 guests</strong></p>
+      <p>🌴 Lean Season: ₱7,900</p>
+      <p>🌞 Peak Season: ₱8,900</p>
+      <p>🔥 Super Peak: ₱10,500</p>
     </div>
 
     <div class="card">
+      <h3>🏠 2 Villas</h3>
+      <p><strong>10–12 guests</strong></p>
+      <p>🌴 Low Season: ₱15,000</p>
+      <p>🌞 High Season: ₱16,000</p>
+    </div>
+  </div>
+
+  <!-- ROW 2: 3 VILLAS -->
+  <div class="rates-row">
+    <div class="card">
       <h3>🏘️ 3 Villas</h3>
       <p><strong>12–15 guests</strong></p>
-      <p>🌴 Low Season: <strong>₱17,000 – ₱18,000</strong></p>
-      <p>🌞 High Season: <strong>₱19,000 – ₱20,000</strong></p>
+      <p>🌴 Low Season: ₱17,000 – ₱18,000</p>
+      <p>🌞 High Season: ₱19,000 – ₱20,000</p>
     </div>
 
     <div class="card">
       <h3>🏘️ 3 Villas</h3>
       <p><strong>15–20 guests</strong></p>
-      <p>🌴 Low Season: <strong>₱23,000</strong></p>
-      <p>🌞 High Season: <strong>₱25,000</strong></p>
+      <p>🌴 Low Season: ₱23,000</p>
+      <p>🌞 High Season: ₱25,000</p>
     </div>
 
     <div class="card">
       <h3>🏘️ 3 Villas</h3>
       <p><strong>20–25 guests</strong></p>
-      <p>🌴 Low Season: <strong>₱28,000</strong></p>
-      <p>🌞 High Season: <strong>₱30,000</strong></p>
+      <p>🌴 Low Season: ₱28,000</p>
+      <p>🌞 High Season: ₱30,000</p>
     </div>
+  </div>
 
+  <!-- ROW 3: 4 VILLAS -->
+  <div class="rates-row">
     <div class="card">
       <h3>🏠 4 Villas</h3>
       <p><strong>25–30 guests</strong></p>
-      <p>🌴 Low Season: <strong>₱35,000</strong></p>
-      <p>🌞 High Season: <strong>₱38,000</strong></p>
+      <p>🌴 Low Season: ₱35,000</p>
+      <p>🌞 High Season: ₱38,000</p>
     </div>
 
     <div class="card">
       <h3>🏠 4 Villas</h3>
       <p><strong>30–35 guests</strong></p>
-      <p>🌴 Low Season: <strong>₱38,000</strong></p>
-      <p>🌞 High Season: <strong>₱40,000</strong></p>
+      <p>🌴 Low Season: ₱38,000</p>
+      <p>🌞 High Season: ₱40,000</p>
     </div>
-
   </div>
 
   <p style="text-align:center; margin-top:30px; font-size:0.95rem;">
-    📌 <em>Rates may vary during holidays and special occasions. Please contact us
-    for availability, exact pricing, and reservations.</em>
+    📌 <em>Rates may change during holidays and special events. Please contact us for confirmation and reservations.</em>
   </p>
 </section>
   
